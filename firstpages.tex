@@ -1,0 +1,61 @@
+%***************************
+% صفحه عنوان
+%***************************
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=3cm,top=2cm}
+\begin{center}
+\includegraphics[height=3cm]{iut_logo.png}
+\vspace{0.4cm}
+
+\textbf{دانشگاه صنعتی اصفهان}\\
+\vspace{0.4cm}
+
+{\large دانشکده مهندسی برق و کامپیوتر}
+\vspace{3.5cm}
+
+{\Large \textbf{گزارش تکلیف ۱}}\\
+\vspace{0.5cm}
+{\Large پیش‌بینی عمر باقی‌مانده باتری‌های لیتیوم‌یونی با استفاده از یادگیری عمیق}
+\vspace{3.5cm}
+
+{\large
+\begin{tabular}{rr}
+\textbf{عنوان درس:} & \hspace{1cm} سیستم‌های تحمل‌پذیر خطا \\[.4cm]
+\textbf{نام دانشجو:} & \hspace{1cm} سپهر صادق‌پور \\[.4cm]
+\textbf{شماره دانشجویی:} & \hspace{1cm} 40510374 \\[.4cm]
+\textbf{استاد درس:} & \hspace{1cm} دکتر کریمی افشار \\
+\end{tabular}
+}
+\vspace{4cm}
+
+\textbf{آبان ۱۴۰۵}
+\end{center}
+\restoregeometry
+\pagebreak
+
+%***************************
+% فهرست مطالب و شکل‌ها و جدول‌ها
+%***************************
+\newgeometry{left=2.5cm,right=3cm,top=3cm,bottom=2.5cm,includehead=false,headsep=1cm,footnotesep=.5cm}
+\pagenumbering{adadi}      % شماره صفحه با حروف (یک، دو، ...)
+\settextfont{XB Zar}[
+  Path = ./,
+  Extension = .ttf,
+  BoldFont = XB ZarBd,
+  ItalicFont = XB ZarIt,
+  BoldItalicFont = XB ZarBdIt
+]\fontsize{12}{6}\selectfont
+\setlatinfontsafe\fontsize{11}{6}
+\baselineskip=.7cm
+\pagestyle{myheadings}     % شماره صفحه بالای صفحه
+
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+\clearpage
+
+% شروع متن اصلی: شماره صفحه با عدد
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\baselineskip=.9cm

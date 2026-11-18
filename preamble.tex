@@ -1,0 +1,55 @@
+%*************************************************
+% همه بسته‌ها و تنظیمات کلی اینجاست (برگرفته از قالب دانشگاه صنعتی اصفهان)
+%*************************************************
+\usepackage{amsthm,amssymb,amsmath}      % ریاضیات
+\usepackage{graphicx}                     % درج تصویر
+\usepackage[a4paper]{geometry}            % حاشیه‌ها
+\usepackage{titlesec}                     % ظاهر عنوان‌ها
+\usepackage{setspace}                     % فاصله خطوط
+\usepackage[stable,bottom]{footmisc}      % پاورقی در انتهای صفحه
+\usepackage{zref-perpage}                 % شماره‌گذاری پاورقی در هر صفحه از اول
+\zmakeperpage[1]{footnote}
+
+\usepackage{xepersian}
+
+% فونت اصلی فارسی
+\settextfont{XB Zar}[
+  Path = ./,
+  Extension = .ttf,
+  BoldFont = XB ZarBd,
+  ItalicFont = XB ZarIt,
+  BoldItalicFont = XB ZarBdIt
+]
+
+% پاورقی‌ها چپ‌به‌راست (برای واژه‌های انگلیسی)
+\setfootnoteLR
+
+\makeatletter
+\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    \noindent
+    \hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}
+\makeatother
+
+% جداکننده شماره بخش‌ها: خط تیره  (۱-۲-)
+\SepMark{-}
+
+% ظاهر عنوان بخش‌ها و زیربخش‌ها
+\titlespacing*{\section}{0pt}{1cm}{0.3cm}
+\titleformat{\section}
+  {\fontsize{14}{6}\bfseries}{\thesection}{1em}{}
+
+\titlespacing*{\subsection}{0pt}{.8cm}{0.2cm}
+\titleformat{\subsection}
+  {\fontsize{12}{6}\bfseries}{\thesubsection}{1em}{}
+
+\titlespacing*{\subsubsection}{0pt}{.6cm}{0.1cm}
+\titleformat{\subsubsection}
+  {\fontsize{11}{6}\bfseries}{\thesubsubsection}{1em}{}
+
+% فونت لاتین: Times New Roman، و در صورت نبودن، جایگزین‌های مشابه
+\newcommand{\setlatinfontsafe}{%
+  \IfFontExistsTF{Times New Roman}{\setlatintextfont{Times New Roman}}{%
+  \IfFontExistsTF{TeX Gyre Termes}{\setlatintextfont{TeX Gyre Termes}}{%
+  \setlatintextfont{Liberation Serif}}}}
